@@ -1,5 +1,5 @@
 import React from 'react';
-import './stk_stylesheet.css';
+import './stylesheet.css';
 import BreedSelect from './BreedSelect';
 
 class Header extends React.Component {
@@ -10,9 +10,9 @@ class Header extends React.Component {
 
   render() {
     return (
-      <section className='innerbox stk_heading'>
-        <h1 className='stk_heading1'><span class='imag1'>{this.props.imag1 && this.capitalize(this.props.imag1)}</span> Dog Gallery</h1>
-        <p className='stk_subheading'>ITMD-565-sagrawal4@hawk.iit.edu</p>
+      <section className='innerbox head1'>
+        <h1 className='headerh1'><span class='head2'>{this.props.imag1 && this.capitalize(this.props.imag1)}</span> Dog Gallery</h1>
+        <p className='head_sub'>SHIVANI AGRAWAL</p>
 
         {this.props.breeds && <BreedSelect breeds={this.props.breeds} bars={this.props.action} />}
       </section>

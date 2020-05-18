@@ -1,5 +1,5 @@
 import React from 'react';
-import './stk_stylesheet.css';
+import './stylesheet.css';
 
 class ImageGrid extends React.Component {
 
@@ -9,10 +9,10 @@ class ImageGrid extends React.Component {
 
   render() {
     return (
-      <section className='innerbox stk_image_stk clearfix'>
-        {this.props.stk_breed_array && this.props.stk_breed_array.map((item, index) => 
-          <div className='stk_case' onClick={() => this.Click_image(index)} key={index}>
-            <img src={item} className='stk_case-img-top' alt='...' />
+      <section className='innerbox image3 clearfix'>
+        {this.props.Breed_def_arr && this.props.Breed_def_arr.map((item, index) => 
+          <div className='cc' onClick={() => this.Click_image(index)} key={index}>
+            <img src={item} className='card-img-top' alt='...' />
           </div>
         )}
       </section>

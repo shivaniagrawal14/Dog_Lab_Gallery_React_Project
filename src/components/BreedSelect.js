@@ -1,5 +1,5 @@
 import React from 'react';
-import './stk_stylesheet.css';
+import './stylesheet.css';
 
 class BreedSelect extends React.Component {
 
@@ -9,10 +9,10 @@ class BreedSelect extends React.Component {
 
   render () {
     return (
-      <section className='breed_stk'>
-        <div className='stk_form'>
+      <section className='breed-s1'>
+        <div className='form1'>
           <label>Select Breed:</label>
-          <select className='stk_cus' onChange={(event) => this.BreedChang(event)}>
+          <select className='custom-s1' onChange={(event) => this.BreedChang(event)}>
             {this.props.breeds && this.props.breeds.map((item, index) => 
               <option key={index} value={item}>{item}</option>
             )}
