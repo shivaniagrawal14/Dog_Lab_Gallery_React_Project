@@ -1,3 +1,11 @@
+<h1 align="center">
+  React Project - Dog_Lab_Gallery
+</h1>
+<p align="center">
+ The objective is to build a small React application with components using JSX which will be retrieving the data from a public API. I build a small image gallery of dog images form the dog api.
+</p>
+
+
 In this, experimenting with some additional React concepts like lifecycle events, components, state and props, JSX, ES6 Modules, and webpack. The objective is to build a small React application with components using JSX and retrieving the data from a public API, building a small image gallery of dog images form the dog api.
 
 ![image](https://user-images.githubusercontent.com/57364855/82261221-4690f980-9924-11ea-963e-589d3ba48520.png)
@@ -42,12 +50,6 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### Code Splitting
 
