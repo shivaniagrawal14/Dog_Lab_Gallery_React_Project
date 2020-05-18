@@ -1,0 +1,14 @@
+
+
+
+.innerbox {
+  margin: 0 auto;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 960px) {
+  .container-md {
+    width: 960px;
+  }
+}
