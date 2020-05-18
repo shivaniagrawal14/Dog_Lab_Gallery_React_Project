@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this, experimenting with some additional React concepts like lifecycle events, components, state and props, JSX, ES6 Modules, and webpack. The objective is to build a small React application with components using JSX and retrieving the data from a public API, building a small image gallery of dog images form the dog api.
 
 ## Available Scripts
 
