@@ -1,5 +1,11 @@
 In this, experimenting with some additional React concepts like lifecycle events, components, state and props, JSX, ES6 Modules, and webpack. The objective is to build a small React application with components using JSX and retrieving the data from a public API, building a small image gallery of dog images form the dog api.
 
+![image](https://user-images.githubusercontent.com/57364855/82261221-4690f980-9924-11ea-963e-589d3ba48520.png)
+![image](https://user-images.githubusercontent.com/57364855/82261367-79d38880-9924-11ea-9483-c31c3e2c53ae.png)
+
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
