@@ -3,17 +3,17 @@ import './App.css';
 import Header from './components/Header';
 import FeaturedImage from './components/FeaturedImage';
 import ImageGrid from './components/ImageGrid';
-import API from './services/DogGalleryApi';
+import API from './components/DogGalleryApi';
 
 class App extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
+constructor(props) {
+super(props);
+this.state = {
       breeds: null,
-      Breed_sel: [],
-      Breed_default: null,
-      Breed_defaultList: null,
+      stk_bre_select: [],
+      stk_breed: null,
+      stk_breed_array: null,
       imag1: null
     };
 
@@ -22,27 +22,27 @@ class App extends React.Component {
   }
 
   getMostThreeBreeds(list) {
-    let defaultList = ['poodle', 'chow', 'bulldog'];
-    let Breed_sel = [];
+    let stk_bre_default = ['clumber', 'briard', 'germanshepherd'];
+    let stk_bre_select = [];
 
     Object.keys(list).map((item) => {
-      for (let i = 0; i < defaultList.length; i++) {
-        if (defaultList[i] === item) {
-           return Breed_sel.push(item);
+      for (let i = 0; i < stk_bre_default.length; i++) {
+        if (stk_bre_default[i] === item) {
+           return stk_bre_select.push(item);
         }
       }
     });
 
-    this.setState({Breed_sel: Breed_sel});
+    this.setState({stk_bre_select: stk_bre_select});
 
-    return Breed_sel;
+    return stk_bre_select;
   }
 
   getSelectedBreed(breed) {
     API.get('/breed/' + breed + '/images').then(response => {
       this.setState({
-        Breed_default: response.data.message[0],
-        Breed_defaultList: response.data.message,
+        stk_breed: response.data.message[0],
+        stk_breed_array: response.data.message,
         imag1: breed
       });
     })
@@ -57,7 +57,7 @@ class App extends React.Component {
 
   handleSelectDog(id) {
     this.setState({
-      Breed_default: this.state.Breed_defaultList[id]
+      stk_breed: this.state.stk_breed_array[id]
     })
   }
 
@@ -65,7 +65,7 @@ class App extends React.Component {
     
     API.get('/breeds/list/all').then(response => {
       this.setState({breeds: this.getMostThreeBreeds(response.data.message)});
-      this.getSelectedBreed(this.state.Breed_sel[0]);
+      this.getSelectedBreed(this.state.stk_bre_select[0]);
     })
     .catch(e => {
       console.log(e);
@@ -78,11 +78,11 @@ class App extends React.Component {
         {this.state.breeds && 
           <Header imag1={this.state.imag1} breeds={this.state.breeds} action={this.getListByBreed} />
         }
-        {this.state.Breed_default && 
-          <FeaturedImage Breed_default={this.state.Breed_default} />
+        {this.state.stk_breed && 
+          <FeaturedImage stk_breed={this.state.stk_breed} />
         }
-        {this.state.Breed_defaultList &&
-          <ImageGrid Breed_defaultList={this.state.Breed_defaultList} handleClick={this.handleSelectDog}/>
+        {this.state.stk_breed_array &&
+          <ImageGrid stk_breed_array={this.state.stk_breed_array} handleClick={this.handleSelectDog}/>
         }
       </div>
     );
